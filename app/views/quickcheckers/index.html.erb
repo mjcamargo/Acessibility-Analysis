@@ -1,0 +1,31 @@
+<h3><span><%= notice %></h3><span>
+</br>
+<h1><span>List of Reports</span></h1>
+<div class="tables-center">
+    <table class="tables table-striped table-dark">
+      <thead>
+        <tr class="bg-primary">
+          <th>Websites</th>
+          <th></th>
+          <th></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @quickcheckers.each do |quickchecker| %>
+          <tr>
+            <td><%=quickchecker.url1%></br></br><%= quickchecker.url2%></br></br><%= quickchecker.url3%></td>
+            <td><%= link_to 'Show', quickchecker, :class => 'btn btn-success' %></td>
+            <td><%= link_to 'Destroy', quickchecker, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>    
+
+<div class="actions" align="center">
+    <%= link_to 'New Analysis', new_quickchecker_path, class: "btn btn-primary"%>
+    <%= link_to 'Back', root_path, class:'btn btn-danger' %>
+    <%= link_to 'Home', root_path, class:'btn btn-success' %>
+</div>

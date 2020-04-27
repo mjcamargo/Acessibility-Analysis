@@ -1,0 +1,30 @@
+<div class="center-box">
+  <div class="row-fluid">
+    <div class="span6 offset3">
+
+        <%= form_for(quickchecker) do |f| %>
+          <% if quickchecker.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(quickchecker.errors.count, "error") %> prohibited this quickchecker from being saved:</h2>
+        
+              <ul>
+              <% quickchecker.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+        
+          <%= f.text_field :url1, placeholder: "Insert the 1st website link (Required)", required: true, class: "form-control" %> 
+          <%= f.text_field :url2, placeholder: "Insert the 2nd website link ", class: "form-control" %> 
+          <%= f.text_field :url3, placeholder: "Insert the 3rd website link", class: "form-control" %> 
+        
+          <div class="actions" align="center">
+            <%= f.submit "Submit", class: "btn btn-success" %>
+            <%= link_to 'Back', :back, class:'btn btn-danger' %>
+            <%= link_to 'Home', root_path, class:'btn btn-primary' %>
+          </div>
+        <% end %>
+  </div>
+  </div>  
+</div>

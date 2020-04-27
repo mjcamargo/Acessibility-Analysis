@@ -1,0 +1,73 @@
+<div class="container">
+    <h1><span>WCAG Level A</span></h1>
+    
+    <div class="report">
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Guideline</th>
+                <th>Issues</th>
+                <th>Warnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for i in 0..16 do %>  
+                <tr>
+                    <th><%= @report.guideline[i] %> </th>
+                    <td><%= @totalissues[0].values[i] %></td>
+                    <td><%= @totalissues[1].values[i] %></td>
+                </tr>
+            <% end %>
+        </tbody>
+        </table>
+    </div>
+    
+    <h1><span>WCAG Level AA </span></h1>
+    
+    <div class="report">
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Guideline</th>
+                <th>Issues</th>
+                <th>Warnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for i in 17..22 do %>  
+                <tr>
+                    <th><%= @report.guideline[i] %> </th>
+                    <td><%= @totalissues[0].values[i] %></td>
+                    <td><%= @totalissues[1].values[i] %></td>
+                </tr>
+            <% end %>
+        </tbody>
+        </table>
+    </div>
+    
+    <h1><span>WCAG Level AAA </span></h1>
+    
+    <div class="report">
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Guideline</th>
+                <th>Issues</th>
+                <th>Warnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for i in 23..33 do %>  
+                <tr>
+                    <th><%= @report.guideline[i] %> </th>
+                    <td><%= @totalissues[0].values[i] %></td>
+                    <td><%= @totalissues[1].values[i] %></td>
+                </tr>
+            <% end %>
+        </tbody>
+        </table>
+    </div>
+    <div class="actions" align="center">
+            <%= link_to 'Home', root_path, class:'btn btn-success' %>
+    </div>
+</div>

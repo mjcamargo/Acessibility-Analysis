@@ -1,0 +1,133 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body  {
+    background: url(black-wood.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+}
+
+.box-center{
+  background: white;
+  width:30%;
+  text-align: center;
+  border-radius: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+   
+.box-center img{
+  max-width: 100%;
+  height: auto;
+}
+
+.box-center .btn{
+  width:90%;
+}
+
+h1 {
+  text-align: center; 
+}
+
+h1 span { 
+  background-color: rgb(255, 255, 255);
+  color:black;
+  border-radius: 5px;
+}
+
+.center-box {
+  font-weight: bold;
+  margin: 20px auto;
+  background: rgba(0,0,0, 0.4);
+  width: 40%;
+  padding: 20px 20px 20px 20px;
+  border-radius: 25px;
+}
+
+.tables {
+  color: black;
+  font-weight: bold;
+  margin: 30px auto 5px auto;
+  background: rgba(255,255,255, 0.7);
+  width: 70%;
+
+}
+
+.tables-center {
+  font-weight: bold;
+  margin: 10px auto;
+  width: 70%;
+}
+
+.bg-primary th{
+    background:#0A3DC9;
+    font-weight: bold;
+    font-size:20px;
+    text-align:center;
+}
+
+.tables td{
+   padding: 8px ;
+}
+
+.bg-primary th{
+    background:#0A3DC9;
+    font-weight: bold;
+    font-size:20px;
+    text-align:center;
+}
+
+.errors tr{
+    background:#0A3DC9;
+    font-weight: bold;
+    font-size:20px;
+    text-align:center;
+}
+
+.report .table-dark {
+ 
+  color: #fff;
+  background-color: rgba(25, 21, 121, 0.8);
+  width:60%;
+  margin-left:auto; 
+  margin-right:auto;
+ 
+}
+ 
+ 
+ 
+.table-dark th,
+ 
+.table-dark td,
+ 
+.table-dark thead th {
+ 
+  border-color: #FF860D;
+ 
+}
+
+.report2 .table-dark {
+ 
+  color: #fff;
+  background-color: rgba(25, 21, 121, 0.8);
+  width:60%;
+  margin-left:auto; 
+  margin-right:auto;
+
+}
+
+.report2 th, td{
+    text-align:center;
+}
+
+h3 span { 
+  background-color: rgb(254, 241, 96);
+  float:left;
+  color:#000000;
+  border-color:#018c1f;
+}

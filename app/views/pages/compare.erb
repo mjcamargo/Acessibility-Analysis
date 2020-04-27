@@ -1,0 +1,155 @@
+<div class="container">
+    <h1><span>Results Comparation</span></h1>
+    
+    <div class="report">
+        <% totalissues = @totalissues %>
+     
+        <% length = (totalissues[0].length / 3)%>
+        <% j = 0 %>
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Issues</th>
+                <th>Warnings</th>
+                <th>Total Error</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for i in 0..length-1 do %>  
+                <tr>
+                    <td bgcolor="##003E8E" width="15%">Website <%=i+1%> </td>
+                    <td><%= totalissues[0][j] %></td>
+                    <td><%= totalissues[0][j+1]  %></td>
+                    <td><%= totalissues[0][j+2] %></td>
+                    <% j += 3 %>
+                </tr>
+            <% end %>
+                <tr>
+                    <td bgcolor="##003E8E"><%= "=Average=" %></td>
+                    <td bgcolor="#215300"><%= totalissues[1] %></td>
+                    <td bgcolor="#215300"><%= totalissues[2] %></td>
+                    <td bgcolor="#215300"><%= totalissues[3] %></td>
+                </tr>
+        </tbody>
+        </table>
+    </div>
+    <br> 
+    <div align='center' id="chartContainer"><%= @chart.render() %></div>
+
+    <br> <br> 
+    <h1><span>Average by Level</span></h1>
+    <% allLevels = @allLevels %>
+    <% length = (allLevels[0].length / 6)%>
+    <% j = 0 %>
+    <div class="report2">
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">A</th>
+                <th colspan="2">AA</th>
+                <th colspan="2">AAA</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Issues</th>
+                <th>Warnings</th>
+                <th>Issues</th>
+                <th>Warnings</th>
+                <th>Issues</th>
+                <th>Warnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for i in 0..length-1 do %>  
+                <tr>
+                    <td bgcolor="##003E8E" width="15%">Website <%=i+1%> </td>
+                    <td><%= allLevels[0][j]  %></td>
+                    <td><%= allLevels[0][j+3] %></td>
+                    <td><%= allLevels[0][j+1] %></td>
+                    <td><%= allLevels[0][j+4] %></td>
+                    <td><%= allLevels[0][j+2] %></td>
+                    <td><%= allLevels[0][j+5] %></td>
+                    <% j += 6 %>
+                </tr>
+            <% end %>
+                <tr>
+                    <td bgcolor="##003E8E"><%= "=Average=" %></td>
+                    <td bgcolor="#215300"><%= allLevels[1] %></td>
+                    <td bgcolor="#215300"><%= allLevels[2] %></td>
+                    <td bgcolor="#215300"><%= allLevels[3] %></td>
+                    <td bgcolor="#215300"><%= allLevels[4] %></td>
+                    <td bgcolor="#215300"><%= allLevels[5] %></td>
+                    <td bgcolor="#215300"><%= allLevels[6] %></td>
+                </tr>
+        </tbody>
+        </table>
+        <br> 
+        <div align='center' id="chartContainer2"><%= @chart2.render() %></div>  
+        <br> <br> 
+        
+        <h1><span>Average by Principles</span></h1>
+        <% allPrinciples = @allPrinciples %>
+        <% length = (allPrinciples[0].length / 8)%>
+        <% j = 0 %>
+        <div class="report2">
+            <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="2">Perceivable</th>
+                    <th colspan="2">Operable</th>
+                    <th colspan="2">Understandable</th>
+                    <th colspan="2">Robust</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Issues</th>
+                    <th>Warnings</th>
+                    <th>Issues</th>
+                    <th>Warnings</th>
+                    <th>Issues</th>
+                    <th>Warnings</th>
+                    <th>Issues</th>
+                    <th>Warnings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for i in 0..length-1 do %>  
+                    <tr>
+                        <td bgcolor="##003E8E" width="15%">Website <%=i+1%> </td>
+                        <td><%= allPrinciples[0][j]  %></td>
+                        <td><%= allPrinciples[0][j+1] %></td>
+                        <td><%= allPrinciples[0][j+2] %></td>
+                        <td><%= allPrinciples[0][j+3] %></td>
+                        <td><%= allPrinciples[0][j+4] %></td>
+                        <td><%= allPrinciples[0][j+5] %></td>
+                        <td><%= allPrinciples[0][j+6] %></td>
+                        <td><%= allPrinciples[0][j+7] %></td>
+                        <% j += 8 %>
+                    </tr>
+                <% end %>
+                    <tr>
+                        <td bgcolor="##003E8E"><%= "=Average=" %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[1] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[2] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[3] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[4] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[5] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[6] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[7] %></td>
+                        <td bgcolor="#215300"><%= allPrinciples[8] %></td>
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+         <br> 
+        <div align='center' id="chartContainer3"><%= @chart3.render() %></div>
+        <div align='center' id="chartContainer4"><%= @chart4.render() %></div>
+</div>

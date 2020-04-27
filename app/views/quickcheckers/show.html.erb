@@ -1,0 +1,60 @@
+<h3><span><%= notice %></h3><span>
+</br>
+<h1><span>Report No. <%= @quickchecker.id%> </span></h1>
+<% require 'json' %>
+
+ <div class="tables-center"> 
+ 	<% info = JSON.parse(@quickchecker.info)%>
+ 	<% count = info.count/4%>
+	<% for i in 1..count do %>
+		<table class="tables table-striped">
+			<% if i==1 %>
+				<% @url = @quickchecker.url1%>
+				<% @total =  info[1]%>
+				<% $t1 =  @total%>
+				<% @errors = info[2]%>
+				<% @warnings = info[3]%>
+			<% end %>
+			<% if i==2 %>
+				<% @url = @quickchecker.url2%>
+				<% @total =  info[5]%>
+				<% @errors = info[6]%>
+				<% @warnings = info[7]%>
+			<% end %>
+			<% if i==3 %>
+				<% @url = @quickchecker.url3%>
+				<% @total =  info[9]%>
+				<% @errors = info[10]%>
+				<% @warnings = info[11]%>
+			<% end %>
+			<thead>
+				<tr class="bg-primary">
+					<th><%= @url %></th>
+				<th colspan="10"></th>
+				</tr>
+				<tr>
+					<td>Issues</td>
+				<td><%= @errors %></td>
+				</tr>
+				<tr>
+					<td>Warnings</td>
+					<td><%= @warnings %></td>
+				</tr>
+				<tr>
+					<td>Total Error</td>
+					<td><%= @total %></td>
+				</tr>
+			</thead>
+		</table>
+		
+		<div class="actions" align="center">
+			<%= link_to 'View full report', report_path(:url => @file_name, :pos => i)	, class:'btn btn-success' %>
+		</div>
+	<%end%>    
+</div></br>
+	<div class="actions" align="center">
+        <%= link_to 'Compare all websites', compare_path(:url => @file_name,:count => count), class:'btn btn-warning' %>
+        <%= link_to 'Back', quickcheckers_path, class:'btn btn-danger' %>
+        <%= link_to 'Home', root_path, class:'btn btn-primary' %>
+  	</div>
+
