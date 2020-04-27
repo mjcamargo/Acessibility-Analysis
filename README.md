@@ -1,24 +1,10 @@
-# README
+Library
+Analyser.rb must be update with  key  and projectID.
+To get the acess go to: https://tenon.io/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ def self.tenon(url)
+        key = 'YOUR KEY'
+        tenon_uri= 'https://tenon.io/api/'
+        projectID = 'YOUR PROJECT ID (OPTIONAL)'
+        .....
